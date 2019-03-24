@@ -1,0 +1,34 @@
+.navbar {
+    &-wrapper {
+        height: 100px;
+        width: 100%;
+        background-image: linear-gradient(270deg, #212121, #111111);
+        background-size: 3786px;
+        background-position: right;
+        position: fixed;
+    }
+
+    &-container {
+        max-width: 1080px;
+        height: 100%;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        color: white;
+    }
+
+    &-link {
+        color: white;
+        margin-left: 62px;
+
+        &--highlighted {
+            color: black;
+            background-color: orange;
+        }
+    }
+}
