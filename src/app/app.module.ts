@@ -4,11 +4,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoryOverviewComponent } from './category-overview/category-overview.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeWidgetComponent } from './homepage/home-widget/home-widget.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CategoryComponent } from './category-overview/category/category.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,18 @@ import { NavbarComponent } from './navbar/navbar.component';
     NavbarComponent,
     HomepageComponent,
     FooterComponent,
-    HomeWidgetComponent
+    HomeWidgetComponent,
+    CategoryOverviewComponent,
+    PageNotFoundComponent,
+    CategoryComponent
   ],
-  imports: [BrowserModule, MatButtonModule, MatInputModule, MatFormFieldModule],
+  imports: [
+    BrowserModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    AppRoutingModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
