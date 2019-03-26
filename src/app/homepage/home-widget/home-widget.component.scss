@@ -29,31 +29,32 @@
   }
 
   &-input {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     margin-top: 64px;
     background-color: #ffffff;
-    border-radius: 28px;
-    height: 56px;
+    border-radius: 34px;
+    height: 66px;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 8px;
 
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 1.21px;
-    color: #D3D3D3;
-    vertical-align: center;
-    padding: 0 -32px;
+    color: #d3d3d3;
+
+    ::ng-deep .mat-form-field-underline {
+      display: none;
+    }
 
     &__button {
       background-color: $brand-accent;
-        border-radius: 22px;
+      border-radius: 25px;
 
-        font-size: 18px;
-        letter-spacing: 1.21px;
-        font-weight: 600;
-        height: 44px;
-        width: 152px;
+      font-size: 18px;
+      letter-spacing: 1.21px;
+      font-weight: 600;
+      height: 50px;
+      width: 152px;
     }
   }
 
