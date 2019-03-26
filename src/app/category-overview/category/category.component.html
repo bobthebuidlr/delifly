@@ -1,0 +1,6 @@
+<div class="category" [class.active]="activeCategory == category">
+  <h1 class="category-title">{{ category.title }}</h1>
+    <button mat-stroked-button class="category-button" 
+    (click)="activateCategory()"
+    >View</button>
+</div>

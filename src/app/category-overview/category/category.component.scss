@@ -1,0 +1,21 @@
+.category {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+        color: #FFFFFF;
+        font-size: 18px;
+        letter-spacing: 1.21px;
+        font-weight: 300;
+    }
+
+    &-button {
+        width: 120px;
+        color: #434343;
+        border-radius: 25px;
+        border-color: #434343;
+    }
+}

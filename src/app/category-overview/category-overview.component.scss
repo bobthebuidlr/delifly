@@ -1,0 +1,20 @@
+.categories {
+    &-wrapper {
+        height: 100vh;
+        background-color: #100F0F;
+        margin-top: -100px;
+    }
+
+    &-container {
+        display: flex;
+    }
+
+    &-category {
+        flex-basis: 33%;
+    }
+    
+}
+
+.active {
+    background-image: linear-gradient(#100F0F 0%, #100F0F 25%, #141414 100%);
+}
