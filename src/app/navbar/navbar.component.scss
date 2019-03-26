@@ -1,14 +1,17 @@
+@import '../../assets/style/colors.scss';
+
 .navbar {
     &-wrapper {
         height: 100px;
         width: 100%;
-        background-image: linear-gradient(270deg, #212121, #111111);
-        background-size: 3786px;
-        background-position: right;
+        // background-image: linear-gradient(270deg, #212121, #111111);
+        // background-size: 3786px;
+        // background-position: right;
         position: fixed;
     }
 
     &-container {
+        padding: 0 32px;
         max-width: 1080px;
         height: 100%;
         margin: 0 auto;
@@ -20,15 +23,31 @@
 
     &-logo {
         color: white;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-button {
+        background-color: $brand-accent;
+        border-radius: 20px;
+
+        font-size: 14px;
+        letter-spacing: 0.73px;
+        font-weight: 600;
+        width: 132px;
     }
 
     &-link {
         color: white;
-        margin-left: 62px;
+        font-size: 13px;
+        letter-spacing: 1.53px;
 
-        &--highlighted {
-            color: black;
-            background-color: orange;
+        margin-left: 62px;
+        
+        &:hover {
+            cursor: pointer;
         }
     }
 }
