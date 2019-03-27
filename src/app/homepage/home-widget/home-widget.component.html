@@ -1,7 +1,6 @@
 <!-- @TODO: Coloring of input field -->
-
 <div class="home-widget-wrapper">
-  <div class="home-widget-container">
+  <div [@showHide]="isVisible ? 'show' : 'hide'" class="home-widget-container">
     <h1 class="home-widget-title">Fill in Your Flight Number for</h1>
     <h2 class="home-widget-title home-widget-title--accent">
       Endless Possibilities

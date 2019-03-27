@@ -1,5 +1,11 @@
 <div class="categories-wrapper">
   <div class="categories-container">
-    <app-category *ngFor="let category of categories" class="categories-category" [class.active]="activeCategory === category.name" [category]="category" (clickedCategory)="setActiveCategory($event)"></app-category>
+    <app-category
+      *ngFor="let category of categories"
+      class="categories-category"
+      [class.active]="activeCategory === category.name"
+      [category]="category"
+      (clickedCategory)="setActiveCategory($event)"
+    ></app-category>
   </div>
 </div>
