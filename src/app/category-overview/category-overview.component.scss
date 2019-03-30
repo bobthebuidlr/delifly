@@ -1,21 +1,47 @@
+@import "../../assets/style/colors.scss";
+
 .categories {
-    &-wrapper {
-        height: 100vh;
-        background-color: #100F0F;
-        margin-top: -100px;
-    }
+  &-wrapper {
+    height: 100vh;
+    background-color: #100f0f;
+    margin-top: -100px;
+  }
 
-    &-container {
-        display: flex;
-    }
+  &-container {
+    display: flex;
+  }
 
-    &-category {
-        flex-basis: 33%;
+  &-header {
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: 1.82px;
+    line-height: 56px;
+    width: 500px;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 30%;
+    margin-left: -250px;
+    text-align: center;
+
+    &--highlighted {
+      color: $brand-accent;
+      font-weight: 500;
     }
-    
+  }
+
+  &-category {
+    flex: 1 0 15em;
+    overflow: hidden;
+    transition: flex-basis 500ms ease-in-out;
+
+    .active {
+      flex-basis: 10em;
+    }
+  }
 }
 
 .active {
-    background-image: linear-gradient(#100F0F 0%, #100F0F 25%, #141414 100%);
-    flex-basis: 50%;
+  background-image: linear-gradient(#100f0f 0%, #100f0f 25%, #141414 100%);
+  flex-basis: 50%;
 }

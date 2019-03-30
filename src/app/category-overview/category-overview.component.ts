@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryOverviewComponent implements OnInit {
 
+
   categories = [
     { name: 'jewelry', title: 'Jewelry and Watches'},
     { name: 'liquor', title: 'Wines and Liquors'},
     { name: 'styling', title: 'Fashion and Styling'}
   ];
 
-  activeCategory = 'liquor';
-
+  activeCategory = '';
   constructor() { }
 
   ngOnInit() {

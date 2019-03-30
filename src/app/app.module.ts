@@ -14,6 +14,7 @@ import { HomeWidgetComponent } from './homepage/home-widget/home-widget.componen
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeWidgetComponent,
     CategoryOverviewComponent,
     PageNotFoundComponent,
-    CategoryComponent
+    CategoryComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

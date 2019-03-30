@@ -1,0 +1,14 @@
+@import "../../assets/style/colors.scss";
+
+.gallery {
+  &-wrapper {
+    height: 100vh;
+    background-color: #100f0f;
+    margin-top: -100px;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

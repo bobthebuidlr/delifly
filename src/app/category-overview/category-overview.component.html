@@ -1,8 +1,10 @@
 <div class="categories-wrapper">
   <div class="categories-container">
+      <h1 class=categories-header>Choose Your <span class="categories-header--highlighted">Category</span></h1>
     <app-category
       *ngFor="let category of categories"
       class="categories-category"
+      [active]="activeCategory === category.name"
       [class.active]="activeCategory === category.name"
       [category]="category"
       (clickedCategory)="setActiveCategory($event)"
