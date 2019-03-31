@@ -1,11 +1,10 @@
 <div class="category" [class.active]="activeCategory == category">
   <h1 class="category-title">{{ category.title }}</h1>
-  <span [@showHide]="active ? 'show' : 'hide'">
-    <p *ngIf="active" class="category-subtext">Donec id elit non mi porta gravida at eget metus 
+  <div style="color: white;">
+    <p [@showHide]="active ? 'show' : 'hide'" class="category-subtext">Donec id elit non mi porta gravida at eget metus 
         fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.</p>
-    <button mat-flat-button *ngIf="active" [routerLink]="'/gallery'">View Category</button>
-  </span>
-    <button mat-stroked-button *ngIf="!active" class="category-button" 
-    (click)="activateCategory()"
-    >View</button>
+    </div>
+    <button [@enableViewCategory]="active ? 'enabled' : 'disabled'" mat-stroked-button class="category-button" 
+    (click)="triggerCategory()"
+    >{{ active ? 'View Category' : 'View' }}</button>
 </div>

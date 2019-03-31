@@ -20,7 +20,7 @@
     position: absolute;
     color: white;
     left: 50%;
-    top: 30%;
+    top: 15%;
     margin-left: -250px;
     text-align: center;
 
@@ -33,15 +33,11 @@
   &-category {
     flex: 1 0 15em;
     overflow: hidden;
-    transition: flex-basis 500ms ease-in-out;
-
-    .active {
-      flex-basis: 10em;
-    }
+    transition: flex-basis 350ms ease-in-out;    
   }
 }
 
 .active {
+  flex-basis: 40%;
   background-image: linear-gradient(#100f0f 0%, #100f0f 25%, #141414 100%);
-  flex-basis: 50%;
 }

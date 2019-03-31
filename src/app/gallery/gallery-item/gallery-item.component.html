@@ -1,0 +1,29 @@
+<div class="gallery-item-wrapper">
+  <div class="gallery-item-container">
+    <div [style.order]="isEven ? '0' : '2'" class="gallery-item-carousel">
+      <ngb-carousel *ngIf="images" [showNavigationArrows]="false" data-interval="0">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <img [src]="image" class="gallery-item-carousel__image" alt="Random first slide" />
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class="gallery-item-information">
+      <h1 class="gallery-item-information__header">
+        {{ categoryItem.name }}
+        <span class="gallery-item-information__subheader">{{
+          categoryItem.type
+        }}</span>
+      </h1>
+      <p class="gallery-item-information__description">
+        {{ categoryItem.description }}
+      </p>
+      <button
+        mat-flat-button
+        class="gallery-item-information__button"
+        type="button"
+      >
+        View Details
+      </button>
+    </div>
+  </div>
+</div>

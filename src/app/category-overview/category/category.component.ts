@@ -1,5 +1,6 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -10,21 +11,41 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
       state(
         'hide',
         style({
-          opacity: 0,
-          height: 0,
-          'line-height': 0
+          height: '0px',
+          opacity: 0
         })
       ),
       state(
         'show',
         style({
-          opacity: 1,
-          height: 80,
-          'line-height': 1.25
+          height: '150px',
+          opacity: 0.6
         })
       ),
-      transition('hide => show', animate('1000ms')),
-      transition('show => hide', animate('1000ms'))
+      transition('hide => show', animate('.35s ease', keyframes([
+        style({height: '0px', opacity: 0, offset: 0}),
+        style({height: '150px', opacity: 0, offset: 0.6}),
+        style({height: '150px', opacity: 0.6, offset: 1})
+      ])
+      )),
+      transition('show => hide', animate('.2s ease'))
+  ]
+    ),
+    trigger('enableViewCategory', [
+      state('disabled', style({
+        'background-color': 'transparent'
+      })),
+      state('enabled', style({
+        'background-color': '#E4B22B',
+        width: '250px',
+        height: '56px',
+        'border-radius': '28px',
+        color: '#222222',
+        'letter-spacing': '1.21px',
+        'font-size': '18px',
+        'font-weight': '600'
+      })),
+      transition('disabled => enabled', animate('0.2s ease'))
     ])
   ]
 })
@@ -32,18 +53,21 @@ export class CategoryComponent implements OnInit {
 
   @Input() category: any;
   @Input() active = false;
-
   @Output() clickedCategory: EventEmitter<string> = new EventEmitter();
 
   activeCategory = 'liquor';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  activateCategory() {
-    this.clickedCategory.emit(this.category.name);
+  triggerCategory() {
+    if (this.active) {
+      this.router.navigate(['/gallery']);
+    } else {
+      this.clickedCategory.emit(this.category.name);
+    }
     this.active = !this.active;
   }
 

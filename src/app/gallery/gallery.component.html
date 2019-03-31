@@ -1,5 +1,7 @@
 <div class="gallery-wrapper">
   <div class="gallery-container">
-    
+    <div *ngFor="let item of categoryItems; let even = even;">
+      <app-gallery-item [isEven]="even" [categoryItem]="item"></app-gallery-item>
+    </div>
   </div>
 </div>
