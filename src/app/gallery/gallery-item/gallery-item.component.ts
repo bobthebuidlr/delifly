@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GalleryItemComponent implements OnInit {
 
   @Input() isEven: boolean;
-  @Input() categoryItem: Object;
+  @Input() categoryItem;
 
   images = [
     '/assets/products/watches/1941_remontoire_constant.png',
