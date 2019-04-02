@@ -33,11 +33,11 @@
   &-category {
     flex: 1 0 15em;
     overflow: hidden;
-    transition: flex-basis 350ms ease-in-out;    
+    transition: flex-basis 350ms ease-in-out;
   }
 }
 
 .active {
-  flex-basis: 40%;
+  flex-basis: 60%;
   background-image: linear-gradient(#100f0f 0%, #100f0f 25%, #141414 100%);
 }

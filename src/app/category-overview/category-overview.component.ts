@@ -20,8 +20,7 @@ export class CategoryOverviewComponent implements OnInit {
   ngOnInit() {
   }
 
-  setActiveCategory(category: string): void {
-    this.activeCategory = category;
+  setActiveCategory(category): void {
+    this.activeCategory = category.name;
   }
-
 }
