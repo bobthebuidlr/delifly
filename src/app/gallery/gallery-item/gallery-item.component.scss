@@ -28,7 +28,7 @@
       width: 100%;
       height: auto;
       max-width: 200px;
-    }   
+    }
   }
 
   &-information {
@@ -63,12 +63,28 @@
     }
 
     &__button {
-        width: 160px;
-        color: #0A0B13;
-        border-radius: 25px;
-        background-color: $brand-accent;
-        font-weight: 600;
+      width: 160px;
+      color: #0a0b13;
+      border-radius: 25px;
+      background-color: $brand-accent;
+      font-weight: 600;
     }
   }
 }
-  
+
+::ng-deep .carousel-control-prev {
+  opacity: 0;
+  width: 50%;
+
+  &:hover {
+    opacity: 0;
+  }
+}
+
+::ng-deep .carousel-control-next {
+  opacity: 0;
+  width: 50%;
+  &:hover {
+    opacity: 0;
+  }
+}

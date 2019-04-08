@@ -21,7 +21,17 @@ body {
   }
 }
 *:focus {
-    outline: none !important;
-    box-shadow: none !important;
-    outline: 0;
+  outline: none !important;
+  box-shadow: none !important;
+  outline: 0;
+}
+
+.special-request-dialog-configuration {
+  height: 100vh;
+  width: 100vw !important;
+  max-width: none !important;
+}
+.special-request-dialog-configuration .mat-dialog-container {
+  background-color: transparent;
+  padding: 0;
 }

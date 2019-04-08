@@ -1,0 +1,92 @@
+@import "../../assets/style/colors.scss";
+
+.about-us {
+  &-wrapper {
+    background-image: linear-gradient(#161616, #000000);
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    max-width: 1080px;
+    width: 1080px;
+  }
+
+  &-photo {
+    background-image: url("../../assets/extra/about-us.png");
+    position: absolute;
+    height: 600px;
+    width: 100%;
+  }
+
+  &-introduction {
+    height: 600px;
+    width: 100%;
+    margin-bottom: 100px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__logo {
+      width: 200px;
+      margin-bottom: 80px;
+    }
+
+    &__subtext {
+      opacity: 0.6;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: 300;
+      text-align: center;
+      max-width: 700px;
+    }
+
+    &__button {
+      color: #222222;
+      height: 36px;
+      padding: 0 24px;
+      margin-top: 32px;
+
+      background-color: $brand-accent;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.73px;
+      border-radius: 24px;
+    }
+  }
+
+  &-section {
+    margin-bottom: 200px;
+    width: 100%;
+    &__header {
+      font-size: 32px;
+      letter-spacing: 1.82px;
+      font-weight: 300;
+
+      &--highlighted {
+        color: $brand-accent;
+        font-weight: 500;
+      }
+    }
+    &__subtext {
+      opacity: 0.6;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: 300;
+      column-count: 2;
+      column-gap: 60px;
+      line-height: 30px;
+      text-align: justify;
+    }
+  }
+}
+
+.footer {
+  margin-bottom: 150px;
+}

@@ -1,0 +1,87 @@
+<div class="special-request-dialog-wrapper">
+  <div class="special-request-dialog-container">
+    <mat-icon (click)="closeDialog()" class="special-request-dialog-close"
+      >close</mat-icon
+    >
+    <div *ngIf="!requestSend" class="special-request-dialog-content">
+      <h1 mat-dialog-title class="special-request-dialog-header">
+        Request a Special
+        <span class="special-request-dialog-header__highlighted">Product</span>
+      </h1>
+      <p class="special-request-dialog-subtext">
+        Donec id elit non mi porta gravida at eget metus fusce dapibus, tellus
+        ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+        justo.
+      </p>
+      <mat-form-field class="special-request-dialog-input" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          class="special-request-dialog-input__field"
+          placeholder="Product"
+        />
+      </mat-form-field>
+      <mat-form-field class="special-request-dialog-input" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          class="special-request-dialog-input__field"
+          placeholder="Additional Information"
+        />
+      </mat-form-field>
+      <mat-form-field class="special-request-dialog-input" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          class="special-request-dialog-input__field"
+          placeholder="Special Request"
+        />
+      </mat-form-field>
+      <mat-form-field class="special-request-dialog-input" floatLabel="never">
+        <input
+          matInput
+          type="email"
+          class="special-request-dialog-input__field"
+          placeholder="Email of Phone"
+        />
+      </mat-form-field>
+      <mat-form-field class="special-request-dialog-input" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          class="special-request-dialog-input__field"
+          placeholder="Upload Image"
+        />
+      </mat-form-field>
+      <button
+        mat-flat-button
+        class="special-request-dialog-button"
+        type="button"
+        (click)="confirmRequest()"
+      >
+        Send Request
+      </button>
+      <app-disclaimer></app-disclaimer>
+    </div>
+    <div *ngIf="requestSend" class="special-request-dialog-content">
+      <h1 mat-dialog-title class="special-request-dialog-header">
+        Your
+        <span class="special-request-dialog-header__highlighted">Request</span>
+        has been send
+      </h1>
+      <p class="special-request-dialog-subtext">
+        Donec id elit non mi porta gravida at eget metus fusce dapibus, tellus
+        ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+        justo.
+      </p>
+      <button
+        mat-flat-button
+        class="special-request-dialog-button"
+        type="button"
+        (click)="closeDialog()"
+      >
+        Close Window
+      </button>
+    </div>
+  </div>
+</div>
