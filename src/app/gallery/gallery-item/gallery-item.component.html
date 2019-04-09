@@ -3,7 +3,7 @@
     <div [style.order]="isEven ? '0' : '2'" class="gallery-item-carousel">
       <ngb-carousel *ngIf="images" [showNavigationArrows]="true" data-interval="0">
         <ng-template ngbSlide *ngFor="let image of images">
-          <img [src]="image" class="gallery-item-carousel__image" alt="Picture Watch" (click)="swapImage($event)" />
+          <img [src]="image" class="gallery-item-carousel__image" alt="Picture Watch" />
         </ng-template>
       </ngb-carousel>
     </div>
@@ -21,6 +21,7 @@
         mat-flat-button
         class="gallery-item-information__button"
         type="button"
+        routerLink="/product"
       >
         View Details
       </button>

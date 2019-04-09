@@ -19,7 +19,7 @@ export class SpecialRequestDialogComponent implements OnInit {
 
   public closeDialog(): void {
     this.dialogRef.close();
-  }
+  }i
 
   private confirmRequest(): void {
     this.requestSend = true;

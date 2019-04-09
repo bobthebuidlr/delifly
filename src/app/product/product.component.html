@@ -1,3 +1,81 @@
-<p>
-  product works!
-</p>
+<div class="product-wrapper">
+  <div class="product-container">
+    <div class="product-introduction">
+      <div class="product-introduction__text">
+        <h1 class="product-header">
+          {{ product.introduction.header.firstPart }}
+          <span class="product-header--highlighted">{{
+            product.introduction.header.highlighted
+          }}</span>
+          {{ product.introduction.header.secondPart }}
+        </h1>
+        <p class="product-description">
+          {{ product.introduction.subtext }}
+        </p>
+      </div>
+      <div class="product-introduction__carousel">
+        <ngb-carousel
+          *ngIf="product.images"
+          [showNavigationArrows]="true"
+          data-interval="0"
+          class="product-carousel"
+        >
+          <ng-template ngbSlide *ngFor="let image of product.images">
+            <img
+              [src]="image"
+              class="product-carousel__image"
+              alt="Picture Watch"
+            />
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+    <div class="product-explanation">
+      <h1 class="product-header">
+        {{ explanation.header.firstPart }}
+        <span class="product-header--highlighted">{{
+          explanation.header.highlighted
+        }}</span>
+      </h1>
+      <p class="product-description">
+        {{ explanation.subtext.firstParagraph }}
+      </p>
+      <p class="product-description">
+        {{ explanation.subtext.secondParagraph }}
+      </p>
+      <button
+        mat-flat-button
+        matSuffix
+        routerLink="/inquire"
+        type="button"
+        class="product-explanation__button"
+      >
+        Inquire Now
+      </button>
+    </div>
+    <div class="product-images">
+      <div class="product-images__1"></div>
+      <div class="product-images__2"></div>
+      <div class="product-images__3"></div>
+      <div class="product-images__4"></div>
+      <div class="product-images__5"></div>
+    </div>
+    <div class="product-information">
+      <div class="product-introduction__text">
+        <h1 class="product-header">
+          {{ product.introduction.header.firstPart }}
+          <span class="product-header--highlighted">{{
+            product.introduction.header.highlighted
+          }}</span>
+          {{ product.introduction.header.secondPart }}
+        </h1>
+        <p class="product-description">
+          {{ product.introduction.subtext }}
+        </p>
+      </div>
+      <div class="product-introduction__carousel">
+        <img [src]="'/assets/products/watches/rolex_platinum/rolex_platinum.png'" alt="Rolex Platinum">
+      </div>
+    </div>
+  </div>
+</div>

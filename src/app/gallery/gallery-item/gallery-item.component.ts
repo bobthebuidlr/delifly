@@ -18,12 +18,4 @@ export class GalleryItemComponent implements OnInit {
 
   ngOnInit() { }
 
-  private swapImage(event) {
-    if (event.offsetX >= (event.srcElement.width / 2)) {
-      console.log('Swap to right');
-    } else {
-      console.log('Swa image to left');
-    }
-  }
-
 }

@@ -6,6 +6,7 @@ import { GalleryComponent } from "./gallery/gallery.component";
 import { HomepageComponent } from "./homepage/homepage.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { SpecialRequestConfirmComponent } from './special-request/special-request-confirm/special-request-confirm.component';
+import { ProductComponent } from './product/product.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "gallery", component: GalleryComponent },
   { path: "confirm-request", component: SpecialRequestConfirmComponent },
   { path: "about-us", component: AboutUsComponent },
+  { path: "product", component: ProductComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: PageNotFoundComponent }
 ];
