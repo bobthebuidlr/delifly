@@ -1,0 +1,35 @@
+<div class="inquiry-confirmation-wrapper">
+  <article class="inquiry-confirmation-container">
+      <mat-icon (click)="closeDialog()" class="inquiry-confirmation-close"
+      >close</mat-icon
+    >
+    <h1 class="inquiry-confirmation-header">
+      Your
+      <span class="highlighted">Inquiry</span>
+      has been received
+    </h1>
+    <p class="inquiry-confirmation-subtext">
+      Donec id elit non mi porta gravida at eget metus fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.
+    </p>
+    <p class="inquiry-confirmation-subtext__bold">
+        Track your order status and leave your email
+    </p>
+    <mat-form-field class="inquiry-confirmation-input" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          class="inquiry-confirmation-input__field"
+          type="email"
+          placeholder="email"
+        />
+      </mat-form-field>
+    <app-disclaimer></app-disclaimer>
+    <button 
+      class="inquiry-confirmation-button"
+      mat-flat-button
+      type="button"
+      (click)="closeDialog()">
+      Close Window
+    </button>
+  </article>
+</div>

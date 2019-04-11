@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { MatDialog } from '@angular/material';
+import { InquiryConfirmationComponent } from './inquiry-confirmation/inquiry-confirmation.component';
 
 @Component({
   selector: "app-product",
@@ -33,7 +35,15 @@ export class ProductComponent implements OnInit {
     } 
   }
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
+
+  public openInquiryConfirmationDialog(): void {
+    const dialogRef = this.dialog.open(InquiryConfirmationComponent, {
+      panelClass: 'inquiry-confirmation-configuration'
+    }
+      );
+  }
+  
 }

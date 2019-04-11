@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-special-request-dialog',
@@ -11,8 +10,7 @@ export class SpecialRequestDialogComponent implements OnInit {
 
   public requestSend: boolean = false;
 
-  constructor(public dialogRef: MatDialogRef<SpecialRequestDialogComponent>,
-    private router: Router) { }
+  constructor(public dialogRef: MatDialogRef<SpecialRequestDialogComponent>) { }
 
   ngOnInit() {
   }
