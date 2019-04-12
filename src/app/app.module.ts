@@ -23,7 +23,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InquiryConfirmationComponent } from './product/inquiry-confirmation/inquiry-confirmation.component';
 import { ProductComponent } from './product/product.component';
-import { SpecialRequestConfirmComponent } from './special-request/special-request-confirm/special-request-confirm.component';
 import { SpecialRequestDialogComponent } from './special-request/special-request-dialog/special-request-dialog.component';
 import { SpecialRequestComponent } from './special-request/special-request.component';
 
@@ -44,7 +43,6 @@ import { SpecialRequestComponent } from './special-request/special-request.compo
     ProductComponent,
     SpecialRequestDialogComponent,
     DisclaimerComponent,
-    SpecialRequestConfirmComponent,
     AboutUsComponent,
     ContactComponent,
     InquiryConfirmationComponent

@@ -7,17 +7,17 @@ import { HomepageComponent } from "./homepage/homepage.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { InquiryConfirmationComponent } from './product/inquiry-confirmation/inquiry-confirmation.component';
 import { ProductComponent } from './product/product.component';
-import { SpecialRequestConfirmComponent } from './special-request/special-request-confirm/special-request-confirm.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
   { path: "home", component: HomepageComponent },
   { path: "category-overview", component: CategoryOverviewComponent },
   { path: "gallery", component: GalleryComponent },
-  { path: "confirm-request", component: SpecialRequestConfirmComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "product", component: ProductComponent },
   { path: "confirm-inquiry", component: InquiryConfirmationComponent },
+  { path: "contact", component: ContactComponent },
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "**", component: PageNotFoundComponent }
 ];
