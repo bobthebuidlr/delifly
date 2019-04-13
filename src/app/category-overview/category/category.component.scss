@@ -5,6 +5,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    // background-image: url("../../../assets/extra/category_background_liquor.png");
+    // background-repeat: no-repeat;
+    // background-position: right;
+    // opacity: 0.3;
 
     &-title {
         color: #FFFFFF;
@@ -17,6 +21,7 @@
     &-subtext {
         color: #FFFFFF;
         margin: 0;
+        margin-bottom: 32px;
         max-width: 500px;
         padding: 0 16px;
         letter-spacing: 1.5px;

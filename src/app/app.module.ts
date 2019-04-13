@@ -25,6 +25,8 @@ import { InquiryConfirmationComponent } from './product/inquiry-confirmation/inq
 import { ProductComponent } from './product/product.component';
 import { SpecialRequestDialogComponent } from './special-request/special-request-dialog/special-request-dialog.component';
 import { SpecialRequestComponent } from './special-request/special-request.component';
+import { NoProductsComponent } from './gallery/no-products/no-products.component';
+import { VideoDialogComponent } from './about-us/video-dialog/video-dialog.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { SpecialRequestComponent } from './special-request/special-request.compo
     DisclaimerComponent,
     AboutUsComponent,
     ContactComponent,
-    InquiryConfirmationComponent
+    InquiryConfirmationComponent,
+    NoProductsComponent,
+    VideoDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,7 @@ import { SpecialRequestComponent } from './special-request/special-request.compo
     MatDialogModule,
     MatIconModule
   ],
-  entryComponents: [SpecialRequestDialogComponent, InquiryConfirmationComponent],
+  entryComponents: [SpecialRequestDialogComponent, InquiryConfirmationComponent, VideoDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

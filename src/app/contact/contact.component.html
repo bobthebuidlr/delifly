@@ -1,15 +1,18 @@
 <div class="contact-us-wrapper">
   <article class="contact-us-container">
-    <h1 class="contact-us-header">
-      Feel free to
-      <span class="highlighted">Contact</span>
-      us
-    </h1>
-    <p class="contact-us-subtext">
-      Donec id elit non mi porta gravida at eget metus fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.
-    </p>
-    <form class="contact-us-form">
-      <mat-form-field class="contact-us-input" floatLabel="never">
+    <div *ngIf="!messageSend">
+      <h1 class="contact-us-header">
+        Feel free to
+        <span class="highlighted">Contact</span>
+        us
+      </h1>
+      <p class="contact-us-subtext">
+        Donec id elit non mi porta gravida at eget metus fusce dapibus, tellus
+        ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+        justo.
+      </p>
+      <form class="contact-us-form">
+        <mat-form-field class="contact-us-input" floatLabel="never">
           <input
             matInput
             type="text"
@@ -18,7 +21,7 @@
             placeholder="First Name*"
           />
         </mat-form-field>
-      <mat-form-field class="contact-us-input" floatLabel="never">
+        <mat-form-field class="contact-us-input" floatLabel="never">
           <input
             matInput
             type="text"
@@ -27,7 +30,7 @@
             placeholder="Last Name*"
           />
         </mat-form-field>
-      <mat-form-field class="contact-us-input" floatLabel="never">
+        <mat-form-field class="contact-us-input" floatLabel="never">
           <input
             matInput
             type="text"
@@ -36,7 +39,7 @@
             placeholder="Email"
           />
         </mat-form-field>
-      <mat-form-field class="contact-us-input" floatLabel="never">
+        <mat-form-field class="contact-us-input" floatLabel="never">
           <input
             matInput
             type="text"
@@ -45,7 +48,10 @@
             placeholder="Phone"
           />
         </mat-form-field>
-      <mat-form-field class="contact-us-input contact-us-input--big" floatLabel="never">
+        <mat-form-field
+          class="contact-us-input contact-us-input--big"
+          floatLabel="never"
+        >
           <input
             matInput
             type="text"
@@ -55,13 +61,36 @@
           />
         </mat-form-field>
       </form>
-    <app-disclaimer></app-disclaimer>
-    <button 
-      class="contact-us-button"
-      mat-flat-button
-      type="button"
-      (click)="sendMessage()">
-      Send Message
-    </button>
+      <app-disclaimer></app-disclaimer>
+      <button
+        class="contact-us-button"
+        mat-flat-button
+        type="button"
+        (click)="sendMessage()"
+      >
+        Send Message
+      </button>
+    </div>
+
+    <div *ngIf="messageSend" class="contact-us__confirm-content">
+      <h1 mat-dialog-title class="contact-us-header">
+        Your
+        <span class="highlighted">Request</span>
+        has been send
+      </h1>
+      <p class="contact-us-subtext contact-us-subtext--confirm">
+        Donec id elit non mi porta gravida at eget metus fusce dapibus, tellus
+        ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+        justo.
+      </p>
+      <button
+        mat-flat-button
+        class="contact-us-button"
+        type="button"
+        routerLink="/category-overview"
+      >
+        Back to Categories
+      </button>
+    </div>
   </article>
 </div>

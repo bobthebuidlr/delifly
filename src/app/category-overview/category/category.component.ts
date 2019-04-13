@@ -18,14 +18,15 @@ import { Router } from '@angular/router';
       state(
         'show',
         style({
-          height: '150px',
+          height: '100%',
           opacity: 0.6
         })
       ),
-      transition('hide => show', animate('.35s ease', keyframes([
+      transition('hide => show', animate('.6s ease', keyframes([
         style({height: '0px', opacity: 0, offset: 0}),
-        style({height: '150px', opacity: 0, offset: 0.6}),
-        style({height: '150px', opacity: 0.6, offset: 1})
+        style({height: '80px', opacity: 0, offset: 0.5}),
+        style({height: '120px', opacity: 0.2, offset: 0.8}),
+        style({height: '100%', opacity: 0.6, offset: 1})
       ])
       )),
       transition('show => hide', animate('.2s ease'))
@@ -64,7 +65,7 @@ export class CategoryComponent implements OnInit {
 
   triggerCategory() {
     if (this.active) {
-      this.router.navigate(['/gallery']);
+      this.router.navigate([`/gallery/${this.category.name}`]);
     } else {
       this.clickedCategory.emit(this.category.name);
     }

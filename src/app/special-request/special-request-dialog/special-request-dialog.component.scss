@@ -21,7 +21,7 @@
   }
 
   &-content {
-    max-width: 700px;
+    max-width: 1080px;
   }
   &-header {
     font-size: 32px;
@@ -36,6 +36,17 @@
     opacity: 0.6;
     font-weight: 300;
     letter-spacing: 1.5px;
+  }
+
+  &-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    ul {
+      margin-right: 32px;
+      font-size: 10px;
+      max-width: 500px;
+    }
   }
 
   &-close {
@@ -80,7 +91,7 @@
     height: 50px;
     padding: 0 44px;
     margin-top: 64px;
-    
+
     background-color: $brand-accent;
     opacity: 1;
     font-size: 18px;

@@ -20,7 +20,7 @@ import { MatInput } from '@angular/material/input';
           opacity: 1
         })
       ),
-      transition('hide => show', animate('200ms')),
+      transition('hide => show', animate('500ms')),
       transition('show => hide', animate('200ms'))
     ])
   ]
@@ -38,6 +38,6 @@ export class HomeWidgetComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.isVisible = !this.isVisible;
-    }, 100);
+    }, 1000);
   }
 }

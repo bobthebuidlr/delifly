@@ -1,11 +1,18 @@
 .home {
     &-wrapper {
-        // background-image: linear-gradient(205deg, #232222 0px, #111111 1600px, #131313 1600px);
-        // background-repeat: no-repeat;
+        background-image: linear-gradient(205deg, #232222 0px, #111111 1600px, #131313 1600px);
         position: relative;
         margin-top: -100px;
-        background-image: url('../../assets/home-background.jpg');
         background-repeat: no-repeat;
         background-size: cover;
+
+        video {
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            opacity: 0.15;
+        }
     }
 }

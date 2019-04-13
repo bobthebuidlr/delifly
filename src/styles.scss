@@ -26,12 +26,14 @@ body {
   outline: 0;
 }
 
-.special-request-dialog-configuration, .inquiry-confirmation-configuration {
+.special-request-dialog-configuration,
+.inquiry-confirmation-configuration {
   height: 100vh;
   width: 100vw !important;
   max-width: none !important;
 }
-.special-request-dialog-configuration .mat-dialog-container, .inquiry-confirmation-configuration .mat-dialog-container {
+
+.dialog-no-padding .mat-dialog-container {
   background-color: transparent;
   padding: 0;
 }

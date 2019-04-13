@@ -1,27 +1,28 @@
 <div class="gallery-item-wrapper">
   <div class="gallery-item-container">
     <div [style.order]="isEven ? '0' : '2'" class="gallery-item-carousel">
-      <ngb-carousel *ngIf="images" [showNavigationArrows]="true" data-interval="0">
-        <ng-template ngbSlide *ngFor="let image of images">
-          <img [src]="image" class="gallery-item-carousel__image" alt="Picture Watch" />
+      <ngb-carousel *ngIf="product.images" [showNavigationArrows]="true" data-interval="0">
+        <ng-template ngbSlide *ngFor="let image of product.images">
+          <img [src]="image" class="gallery-item-carousel__image" />
         </ng-template>
       </ngb-carousel>
     </div>
     <div class="gallery-item-information">
       <h1 class="gallery-item-information__header">
-        {{ categoryItem.name }}
-        <span class="gallery-item-information__subheader">{{
-          categoryItem.type
+        {{ product.title.firstPart }}
+        <span *ngIf="product.title.highlighted" class="gallery-item-information__subheader">{{
+          product.title.highlighted
         }}</span>
+        {{ product.title.secondPart }}
       </h1>
       <p class="gallery-item-information__description">
-        {{ categoryItem.description }}
+        {{ product.title.description ? product.title.description : default.subtext }}
       </p>
       <button
         mat-flat-button
         class="gallery-item-information__button"
         type="button"
-        routerLink="/product"
+        (click)="openProductPage(product.id)"
       >
         View Details
       </button>

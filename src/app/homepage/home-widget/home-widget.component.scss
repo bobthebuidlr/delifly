@@ -24,6 +24,8 @@
 
     &--accent {
       color: $brand-accent;
+      font-weight: 500;
+  
     }
   }
 
@@ -39,7 +41,7 @@
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 1.21px;
-    color: #d3d3d3;
+    color: #222222;
 
     ::ng-deep .mat-form-field-underline {
       display: none;

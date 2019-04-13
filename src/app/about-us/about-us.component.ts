@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { VideoDialogComponent } from './video-dialog/video-dialog.component';
 
 @Component({
   selector: 'app-about-us',
@@ -7,13 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
+    window.scrollTo(0,0);
   }
 
   openVideo(): void {
-    console.log('Video should now open');
+    this.dialog.open(VideoDialogComponent, {
+      panelClass: 'dialog-no-padding'
+    });
   }
 
 }

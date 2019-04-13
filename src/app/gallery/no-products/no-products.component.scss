@@ -1,0 +1,49 @@
+@import "../../../assets/style/colors.scss";
+
+.no-products {
+  &-wrapper {
+    background-image: linear-gradient(#161616, #000000);
+    height: 100vh;
+    // width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -100px;
+  }
+
+  &-container {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    max-width: 710px;
+  }
+
+  &-header {
+    font-size: 32px;
+    letter-spacing: 1.82px;
+    font-weight: 300;
+    line-height: 56px;
+    margin-bottom: 32px;
+    .highlighted {
+      color: $brand-accent;
+    }
+  }
+
+  &-button {
+    color: #222222;
+    height: 50px;
+    padding: 0 44px;
+    margin-top: 64px;
+
+    background-color: $brand-accent;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.21px;
+    border-radius: 25px;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-gallery-item',
   templateUrl: './gallery-item.component.html',
@@ -7,15 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GalleryItemComponent implements OnInit {
 
   @Input() isEven: boolean;
-  @Input() categoryItem;
+  @Input() product;
 
-  images = [
-    '/assets/products/watches/1941_remontoire_constant.png',
-    '/assets/products/watches/1948_bespoke_movement_remontoire.png'
-  ];
+  public default: Object = {
+    subtext: 'Specially developed by the brand, Oystersteel belongs to the 904L steel family, alloys most commonly used in high-tech and in the aerospace and chemical industries where maximum resistance to corrosion is essential.'
+  }
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() { }
+  ngOnInit() {}
+
+  openProductPage(id: number): void {
+    this.router.navigate([`/product/${id}`]);
+  }
 
 }

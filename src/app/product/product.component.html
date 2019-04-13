@@ -3,14 +3,14 @@
     <div class="product-introduction">
       <div class="product-introduction__text">
         <h1 class="product-header">
-          {{ product.introduction.header.firstPart }}
+          {{ product.title.firstPart ? product.title.firstPart : '' }}
           <span class="product-header--highlighted">{{
-            product.introduction.header.highlighted
+            product.title.highlighted
           }}</span>
-          {{ product.introduction.header.secondPart }}
+          {{ product.title.secondPart ? product.title.secondPart : '' }}
         </h1>
         <p class="product-description">
-          {{ product.introduction.subtext }}
+          {{ product.description ? product.description : defaultDescription }}
         </p>
       </div>
       <div class="product-introduction__carousel">
@@ -23,7 +23,7 @@
           <ng-template ngbSlide *ngFor="let image of product.images">
             <img
               [src]="image"
-              class="product-carousel__image"
+              class="product-introduction__carousel__image"
               alt="Picture Watch"
             />
           </ng-template>
@@ -54,27 +54,27 @@
       </button>
     </div>
     <div class="product-images">
-      <div class="product-images__1"></div>
-      <div class="product-images__2"></div>
-      <div class="product-images__3"></div>
-      <div class="product-images__4"></div>
-      <div class="product-images__5"></div>
+      <div class="product-images__1" [style.background]="product.galleryImages.image_1 ? 'url(' + product.galleryImages.image_1 + ')' : ''" [style.background-size]="'cover'"></div>
+      <div class="product-images__2" [style.background]="product.galleryImages.image_2 ? 'url(' + product.galleryImages.image_2 + ')' : ''" [style.background-size]="'cover'"></div>
+      <div class="product-images__3" [style.background]="product.galleryImages.image_3 ? 'url(' + product.galleryImages.image_3 + ')' : ''" [style.background-size]="'cover'"></div>
+      <div class="product-images__4" [style.background]="product.galleryImages.image_4 ? 'url(' + product.galleryImages.image_4 + ')' : ''" [style.background-size]="'cover'"></div>
+      <div class="product-images__5" [style.background]="product.galleryImages.image_5 ? 'url(' + product.galleryImages.image_5 + ')' : ''" [style.background-size]="'cover'"></div>
     </div>
     <div class="product-information">
       <div class="product-introduction__text">
         <h1 class="product-header">
-          {{ product.introduction.header.firstPart }}
+          {{ product.details.title.firstPart }}
           <span class="product-header--highlighted">{{
-            product.introduction.header.highlighted
+            product.details.title.highlighted
           }}</span>
-          {{ product.introduction.header.secondPart }}
+          {{ product.details.title.secondPart }}
         </h1>
         <p class="product-description">
-          {{ product.introduction.subtext }}
+          {{ product.details.description ? product.details.description : defaultDetailsDescription }}
         </p>
       </div>
       <div class="product-introduction__carousel">
-        <img [src]="'/assets/products/watches/rolex_platinum/rolex_platinum.png'" alt="Rolex Platinum">
+        <img [src]="product.images[0]">
       </div>
     </div>
   </div>

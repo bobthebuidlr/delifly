@@ -1,8 +1,13 @@
 <div class="gallery-wrapper">
   <div class="gallery-container">
-    <div *ngFor="let item of categoryItems; let even = even;">
-      <app-gallery-item [isEven]="even" [categoryItem]="item"></app-gallery-item>
+    <div *ngIf="products.length === 0 else showProducts">
+      <app-no-products></app-no-products>
     </div>
+    <ng-template #showProducts>
+      <div *ngFor="let product of products; let even = even;">
+        <app-gallery-item [isEven]="even" [product]="product"></app-gallery-item>
+      </div>
+    </ng-template>
   </div>
-  <app-special-request></app-special-request>
+  <app-special-request *ngIf="products.length !== 0"></app-special-request>
 </div>

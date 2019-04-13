@@ -1,0 +1,25 @@
+@import "../../../assets/style/colors.scss";
+
+.video-dialog {
+  &-wrapper {
+    background-image: linear-gradient(#161616, #000000);
+    height: 100vh;
+    // width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: -100px;
+    padding: 0;
+  }
+
+  &-container {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    max-width: 710px;
+  }
+}

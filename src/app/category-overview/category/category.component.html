@@ -1,8 +1,7 @@
 <div class="category">
   <h1 class="category-title">{{ category.title }}</h1>
   <div style="color: white;">
-    <p [@showHide]="active ? 'show' : 'hide'" class="category-subtext">Donec id elit non mi porta gravida at eget metus 
-        fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo.</p>
+    <p [@showHide]="active ? 'show' : 'hide'" class="category-subtext">{{ category.description }}</p>
     </div>
     <button [@enableViewCategory]="active ? 'enabled' : 'disabled'" mat-stroked-button class="category-button" 
     (click)="triggerCategory()"

@@ -18,7 +18,7 @@ export class SpecialRequestComponent implements OnInit {
 
   openSpecialRequestDialog(): void {
     const dialogRef = this.dialog.open(SpecialRequestDialogComponent,
-      {panelClass: 'special-request-dialog-configuration'
+      {panelClass: ['special-request-dialog-configuration', 'dialog-no-padding']
       }
       );
   }
