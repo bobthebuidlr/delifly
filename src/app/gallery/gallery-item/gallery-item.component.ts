@@ -10,9 +10,7 @@ export class GalleryItemComponent implements OnInit {
   @Input() isEven: boolean;
   @Input() product;
 
-  public default: Object = {
-    subtext: 'Specially developed by the brand, Oystersteel belongs to the 904L steel family, alloys most commonly used in high-tech and in the aerospace and chemical industries where maximum resistance to corrosion is essential.'
-  }
+  defaultDescription = 'Specially developed by the brand, Oystersteel belongs to the 904L steel family, alloys most commonly used in high-tech and in the aerospace and chemical industries where maximum resistance to corrosion is essential.'
 
   constructor(private router: Router) { }
 
