@@ -37,7 +37,7 @@ import { Router } from '@angular/router';
         'background-color': 'transparent'
       })),
       state('enabled', style({
-        'background-color': '#E4B22B',
+        'background-color': '#dab552',
         width: '250px',
         height: '56px',
         'border-radius': '28px',
