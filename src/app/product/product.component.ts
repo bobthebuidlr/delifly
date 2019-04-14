@@ -10,6 +10,13 @@ import { InquiryConfirmationComponent } from "./inquiry-confirmation/inquiry-con
   styleUrls: ["./product.component.scss"]
 })
 export class ProductComponent implements OnInit {
+
+  firstParagraphStyling = {
+    'width': '100%',
+    'align-items': 'center',
+    'margin-bottom': '100px'
+  }
+  
   product;
 
   explanation = {

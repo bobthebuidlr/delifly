@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoProductsComponent implements OnInit {
 
+  buttonText = 'Inquire'
+  headerText = 'Inquire about your Personal Styling Concierge now'
+
   constructor() { }
 
   ngOnInit() {

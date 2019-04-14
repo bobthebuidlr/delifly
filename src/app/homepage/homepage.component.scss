@@ -5,14 +5,18 @@
         margin-top: -100px;
         background-repeat: no-repeat;
         background-size: cover;
-
-        video {
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            opacity: 0.15;
-        }
     }
+        &-container {
+            position: absolute;
+            left: 50%;
+
+            video {
+                position: relative;
+                left: -50%;
+                overflow: hidden;
+                opacity: 0.2;
+                height: 120vh;
+            }
+        }
+    
 }

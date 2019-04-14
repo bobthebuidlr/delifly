@@ -1,14 +1,14 @@
 <div class="special-request-wrapper">
   <div class="special-request-container">
     <h1 class="special-request-header">
-      Couldn't find your dream timepiece?
+      {{ headerText ? headerText : 'Couldn\'t find your dream product?' }}
     </h1>
-    <p class="special-request-subtext">
+    <p *ngIf="!hideDescription" class="special-request-subtext">
       We will make sure that you do! Tell us about your desired timepiece and
       we'll deliver it on the fly.
     </p>
     <button mat-flat-button class="special-request-button" type="button" (click)="openSpecialRequestDialog()">
-      Special Request
+       {{ buttonText ? buttonText : 'Special Request' }}
     </button>
   </div>
 </div>

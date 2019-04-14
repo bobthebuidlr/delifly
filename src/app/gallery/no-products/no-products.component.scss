@@ -2,17 +2,14 @@
 
 .no-products {
   &-wrapper {
-    background-image: linear-gradient(#161616, #000000);
-    height: 100vh;
-    // width: 100vw;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: -100px;
   }
 
   &-container {
     color: white;
+    margin-top: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -20,6 +17,10 @@
     height: 100%;
     justify-content: center;
     max-width: 710px;
+  }
+
+  &-information {
+    margin-bottom: 64px;
   }
 
   &-header {
@@ -31,6 +32,15 @@
     .highlighted {
       color: $brand-accent;
     }
+  }
+
+  &-description {
+    opacity: 0.6;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-align: justify;
+    line-height: 30px;
   }
 
   &-button {

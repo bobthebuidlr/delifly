@@ -1,7 +1,7 @@
 export interface ITitle {
     firstPart?: String,
     secondPart?: String,
-    highlighted: String
+    highlighted?: String
 }
 
 export interface IGalleryImages {
@@ -13,16 +13,18 @@ export interface IGalleryImages {
 }
 
 export interface IDetails {
-    title: ITitle,
+    title?: ITitle,
     description?: String
 }
 
 export interface IProduct {
     id: Number,
     category: 'jewelry' | 'liquor' | 'styling',
-    title: ITitle,
+    productVideoURL?: String; 
+    title?: ITitle,
     description?: String,
     images: Array<String>,
+    repeatIntroduction?: Boolean,
     galleryImages: IGalleryImages,
-    details: IDetails
+    details: Array<IDetails>
 }

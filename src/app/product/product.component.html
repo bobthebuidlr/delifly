@@ -1,34 +1,41 @@
 <div class="product-wrapper">
   <div class="product-container">
     <div class="product-introduction">
-      <div class="product-introduction__text">
-        <h1 class="product-header">
-          {{ product.title.firstPart ? product.title.firstPart : '' }}
-          <span class="product-header--highlighted">{{
-            product.title.highlighted
-          }}</span>
-          {{ product.title.secondPart ? product.title.secondPart : '' }}
-        </h1>
-        <p class="product-description">
-          {{ product.description ? product.description : defaultDescription }}
-        </p>
+      <div *ngFor="let paragraph of product.details; let i = index" [ngStyle]="i === 0 ? firstParagraphStyling : ''" [style.margin-bottom]="!product.details[1] ? '0' : '100px'" class="product-introduction__text">
+          <div *ngIf="i === 0" class="product-introduction__carousel">
+            <div *ngIf="product.productVideoURL else carousel">
+              <video [src]="product.productVideoURL" autoplay class="product-introduction-video"></video>
+            </div>
+              <ngb-carousel
+                #carousel
+                *ngIf="product.images && !product.productVideoURL"
+                [showNavigationArrows]="true"
+                data-interval="0"
+                class="product-carousel"
+              >
+                <ng-template ngbSlide *ngFor="let image of product.images">
+                  <img
+                    [src]="image"
+                    class="product-introduction__carousel__image"
+                    alt="Picture Watch"
+                  />
+                </ng-template>
+              </ngb-carousel>
+            </div>
+            <div [style.width]="i === 0 ? '50%' : ''"ß>
+              <h1 class="product-header">
+                {{ paragraph.title.firstPart }}
+                <span class="product-header--highlighted">{{
+                  paragraph.title.highlighted
+                }}</span>
+                {{ paragraph.title.secondPart }}
+              </h1>
+              <p class="product-description">
+                {{ paragraph.description ? paragraph.description : defaultDetailsDescription }}
+              </p>
+            </div>
       </div>
-      <div class="product-introduction__carousel">
-        <ngb-carousel
-          *ngIf="product.images"
-          [showNavigationArrows]="true"
-          data-interval="0"
-          class="product-carousel"
-        >
-          <ng-template ngbSlide *ngFor="let image of product.images">
-            <img
-              [src]="image"
-              class="product-introduction__carousel__image"
-              alt="Picture Watch"
-            />
-          </ng-template>
-        </ngb-carousel>
-      </div>
+    
     </div>
     <div class="product-explanation">
       <h1 class="product-header">
@@ -53,29 +60,29 @@
         Inquire Now
       </button>
     </div>
-    <div class="product-images">
+    <div *ngIf="product.galleryImages.image_2" class="product-images">
       <div class="product-images__1" [style.background]="product.galleryImages.image_1 ? 'url(' + product.galleryImages.image_1 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__2" [style.background]="product.galleryImages.image_2 ? 'url(' + product.galleryImages.image_2 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__3" [style.background]="product.galleryImages.image_3 ? 'url(' + product.galleryImages.image_3 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__4" [style.background]="product.galleryImages.image_4 ? 'url(' + product.galleryImages.image_4 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__5" [style.background]="product.galleryImages.image_5 ? 'url(' + product.galleryImages.image_5 + ')' : ''" [style.background-size]="'cover'"></div>
     </div>
-    <div class="product-information">
-      <div class="product-introduction__text">
-        <h1 class="product-header">
-          {{ product.details.title.firstPart }}
-          <span class="product-header--highlighted">{{
-            product.details.title.highlighted
-          }}</span>
-          {{ product.details.title.secondPart }}
-        </h1>
-        <p class="product-description">
-          {{ product.details.description ? product.details.description : defaultDetailsDescription }}
-        </p>
-      </div>
+    <!-- <div class="product-information">
+      <div *ngIf="product.repeatIntroduction" class="product-information__text">
+          <h1 class="product-header">
+            {{ product.title.firstPart ? product.title.firstPart : '' }}
+            <span class="product-header--highlighted">{{
+              product.title.highlighted
+            }}</span>
+            {{ product.title.secondPart ? product.title.secondPart : '' }}
+          </h1>
+          <p class="product-description">
+            {{ product.description ? product.description : defaultDescription }}
+          </p>
+        </div>
       <div class="product-bottom-image">
         <img [src]="product.images[0]">
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
