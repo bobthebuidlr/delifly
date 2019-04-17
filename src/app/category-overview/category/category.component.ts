@@ -19,14 +19,14 @@ import { Router } from '@angular/router';
         'show',
         style({
           height: '100%',
-          opacity: 0.6
+          opacity: 0.8
         })
       ),
       transition('hide => show', animate('.6s ease', keyframes([
         style({height: '0px', opacity: 0, offset: 0}),
         style({height: '80px', opacity: 0, offset: 0.5}),
         style({height: '120px', opacity: 0.2, offset: 0.8}),
-        style({height: '100%', opacity: 0.6, offset: 1})
+        style({height: '100%', opacity: 0.8, offset: 1})
       ])
       )),
       transition('show => hide', animate('.2s ease'))
@@ -70,6 +70,10 @@ export class CategoryComponent implements OnInit {
       this.clickedCategory.emit(this.category.name);
     }
     this.active = !this.active;
+  }
+
+  getCategoryImageURL(): string {
+    return `../../../assets/products/${this.category.name}/${this.category.name}.jpg`;
   }
 
 }

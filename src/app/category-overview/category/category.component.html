@@ -1,4 +1,4 @@
-<div class="category">
+<div class="category" [style.background-image]="'url(' + getCategoryImageURL() + ')'" [style.background-size]="'cover'" [style.background-position]="'bottom center'">
   <h1 class="category-title">{{ category.title }}</h1>
   <div style="color: white;">
     <p [@showHide]="active ? 'show' : 'hide'" class="category-subtext">{{ category.description }}</p>

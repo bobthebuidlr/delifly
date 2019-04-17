@@ -10,11 +10,7 @@ export class GalleryService {
       id: 1,
       category: "liquor",
       images: [
-        "/assets/products/liquor/romanee_conti/romanee_conti_1.png",
-        "/assets/products/liquor/romanee_conti/romanee_conti_2.png",
-        "/assets/products/liquor/romanee_conti/romanee_conti_3.png",
-        "/assets/products/liquor/romanee_conti/romanee_conti_4.png",
-        "/assets/products/liquor/romanee_conti/romanee_conti_5.png"
+        "/assets/products/liquor/romanee_conti/romanee_conti_1.png"
       ],
       title: {
         firstPart: "Romanee",
@@ -22,11 +18,7 @@ export class GalleryService {
       },
       description: 'The La Tâche 1969 provided a fitting end for what was a great run of vintage throughout the decade. Now at 45 years old it unashamedly sports a mature, brickish hue. The nose does not quite contain the untrameled exuberance of the 1964 or 1966, but there is a sense of elegance and refinement in situ. The palate is well balanced, slightly rustic in style with chewier tannins than other vintages. There is clearly good backbone here with spice, tangy marmalade and white pepper on the finish that is just missing a little precision. I suspect this was superior 10 to 15 years ago and is now in gentle decline. However, unlike others this is still worth seeking out.',
       galleryImages: {
-        image_1: "/assets/products/liquor/romanee_conti/romanee_conti_1.png",
-        image_2: "/assets/products/liquor/romanee_conti/romanee_conti_2.png",
-        image_3: "/assets/products/liquor/romanee_conti/romanee_conti_3.png",
-        image_4: "/assets/products/liquor/romanee_conti/romanee_conti_4.png",
-        image_5: "/assets/products/liquor/romanee_conti/romanee_conti_5.png"
+        image_1: "/assets/products/liquor/romanee_conti/romanee_conti_1.png"
       },
       details: [{
         title: {
@@ -46,7 +38,6 @@ export class GalleryService {
         firstPart: "Mission",
         highlighted: "Macallan"
       },
-      repeatIntroduction: true,
       description: 'A quite fabulous 34 year old Speyside single malt that was laid to rest at the Macallan distillery in 1968 and bottled for Murray McDavid\'s Mission series in 2002. Drawn from American oak casks at a cask strength 40.2% ABV, this rare vintage Macallan is one of just 852 bottles and comes complete with fine original wooden presentation case.',
       galleryImages: {
         image_1:
@@ -71,7 +62,6 @@ export class GalleryService {
         highlighted: "60 Years"
       },
       description: 'The rare liquid rests in a bottle featuring an image of the Macallan’s spiritual home, Easter Elchies House, hand-painted by acclaimed Irish muralist Michael Dillon. The record-setting whisky was extracted from cask # 263, which was filled in 1926 – about the same time a young American amateur golfer named Bobby Jones won the first of his three Claret Jugs at the British Open held at nearby Royal Lytham & St Annes Golf C',
-      repeatIntroduction: true,
       galleryImages: {
         image_1:
           "/assets/products/liquor/macallan_60_years/macallan_60_years_1.png"
@@ -95,7 +85,6 @@ export class GalleryService {
         highlighted: "25 Years"
       },
       description: 'This satisfyingly complex Single Malt, matured at The Macallan distillery for a minimum of 25 years. Bright Amber in color. Rich and robust with a hint of peach, blood orange and wood spice. Intense, coconut and vanilla with a hint of sultana, lemon and peat. Lingering finish with a hint of sherry, orange and spice.',
-      repeatIntroduction: true,
       galleryImages: {
         image_1:
           "/assets/products/liquor/macallan_25_years/macallan_25_years_1.png"
@@ -143,16 +132,7 @@ export class GalleryService {
       productVideoURL: '/assets/products/jewelry/daytona_116500/daytona_116500.mp4',
       images: [
         "/assets/products/jewelry/daytona_116500/daytona_116500_1.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_2.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_3.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_4.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_5.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_6.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_7.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_8.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_9.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_10.png",
-        "/assets/products/jewelry/daytona_116500/daytona_116500_11.png"
+        "/assets/products/jewelry/daytona_116500/daytona_116500_2.png"
       ],
       title: {
         firstPart: "Daytona",
@@ -160,10 +140,7 @@ export class GalleryService {
       },
       galleryImages: {
         image_1: "/assets/products/jewelry/daytona_116500/daytona_116500_1.png",
-        image_2: "/assets/products/jewelry/daytona_116500/daytona_116500_2.png",
-        image_3: "/assets/products/jewelry/daytona_116500/daytona_116500_3.png",
-        image_4: "/assets/products/jewelry/daytona_116500/daytona_116500_4.png",
-        image_5: "/assets/products/jewelry/daytona_116500/daytona_116500_5.png"
+        image_2: "/assets/products/jewelry/daytona_116500/daytona_116500_2.png"
       },
       details: [{
         title: {
@@ -177,8 +154,7 @@ export class GalleryService {
       category: "jewelry",
       productVideoURL: '/assets/products/jewelry/sideralis/sideralis.mp4',
       images: [
-        "/assets/products/jewelry/sideralis/sideralis_1.png",
-        "/assets/products/jewelry/sideralis/sideralis_2.png"
+        "/assets/products/jewelry/sideralis/sideralis_1.png"
       ],
       title: {
         firstPart: "Louis Money",
@@ -187,8 +163,7 @@ export class GalleryService {
       description:
         "“Sideralis is an invitation to embark on an interstellar journey – a whole new kind of discovery that’s singularly technical and poetic”. The timepiece in question defies comparison, simply because to date, Sideralis does not have any equivalent anywhere in the world of watchmaking, and is protected by two patent applications.",
       galleryImages: {
-        image_1: "/assets/products/jewelry/sideralis/sideralis_1.png",
-        image_2: "/assets/products/jewelry/sideralis/sideralis_2.png"
+        image_1: "/assets/products/jewelry/sideralis/sideralis_1.png"
       },
       details: [
         {
@@ -227,22 +202,17 @@ export class GalleryService {
       images: [
         "/assets/products/jewelry/just_un_clou/just_un_clou_1.png",
         "/assets/products/jewelry/just_un_clou/just_un_clou_2.png",
-        "/assets/products/jewelry/just_un_clou/just_un_clou_3.png",
-        "/assets/products/jewelry/just_un_clou/just_un_clou_4.png",
-        "/assets/products/jewelry/just_un_clou/just_un_clou_5.png"
+        "/assets/products/jewelry/just_un_clou/just_un_clou_3.png"
       ],
       title: {
         firstPart: "Just un",
         highlighted: "Clou"
       },
       description: 'A nail becomes jewelry. Designed in 1970s New York, the first Juste un Clou bracelet reflected a wild, freewheeling era. Bold, modern, and innovative, Juste un Clou is a creative twist on a familiar object. This jewelry collection transcends the everyday, making the ordinary exquisite, for him and for her.',
-      repeatIntroduction: false,
       galleryImages: {
         image_1: "/assets/products/jewelry/just_un_clou/just_un_clou_1.png",
         image_2: "/assets/products/jewelry/just_un_clou/just_un_clou_2.png",
-        image_3: "/assets/products/jewelry/just_un_clou/just_un_clou_3.png",
-        image_4: "/assets/products/jewelry/just_un_clou/just_un_clou_4.png",
-        image_5: "/assets/products/jewelry/just_un_clou/just_un_clou_5.png"
+        image_3: "/assets/products/jewelry/just_un_clou/just_un_clou_3.png"
       },
       details: [{
         title: {
@@ -257,11 +227,7 @@ export class GalleryService {
       category: "jewelry",
       images: [
         "/assets/products/jewelry/ecrou/ecrou_1.png",
-        "/assets/products/jewelry/ecrou/ecrou_2.png",
-        "/assets/products/jewelry/ecrou/ecrou_3.png",
-        "/assets/products/jewelry/ecrou/ecrou_4.png",
-        "/assets/products/jewelry/ecrou/ecrou_5.png",
-        "/assets/products/jewelry/ecrou/ecrou_6.png"
+        "/assets/products/jewelry/ecrou/ecrou_2.png"
       ],
       title: {
         highlighted: "Ecrou",
@@ -270,10 +236,7 @@ export class GalleryService {
       description: 'A transformation of the ordinary to the extraordinary: the new Écrou de Cartier collection. A bold new design, Écrou de Cartier embodies daring and limitless style. Forceful and exquisite at the same time, it makes a striking statement of sophistication.',
       galleryImages: {
         image_1: "assets/products/jewelry/ecrou/ecrou_1.png",
-        image_2: "assets/products/jewelry/ecrou/ecrou_2.png",
-        image_3: "assets/products/jewelry/ecrou/ecrou_3.png",
-        image_4: "assets/products/jewelry/ecrou/ecrou_4.png",
-        image_5: "assets/products/jewelry/ecrou/ecrou_5.png"
+        image_2: "assets/products/jewelry/ecrou/ecrou_2.png"
       },
       details: [{
         title: {

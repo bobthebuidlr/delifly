@@ -4,7 +4,7 @@
       <div *ngFor="let paragraph of product.details; let i = index" [ngStyle]="i === 0 ? firstParagraphStyling : ''" [style.margin-bottom]="!product.details[1] ? '0' : '100px'" class="product-introduction__text">
           <div *ngIf="i === 0" class="product-introduction__carousel">
             <div *ngIf="product.productVideoURL else carousel">
-              <video [src]="product.productVideoURL" autoplay class="product-introduction-video"></video>
+              <video #video [src]="product.productVideoURL" autoplay class="product-introduction-video" controls muted="true"></video>
             </div>
               <ngb-carousel
                 #carousel
@@ -60,13 +60,13 @@
         Inquire Now
       </button>
     </div>
-    <div *ngIf="product.galleryImages.image_2" class="product-images">
+    <!-- <div *ngIf="product.galleryImages.image_2" class="product-images">
       <div class="product-images__1" [style.background]="product.galleryImages.image_1 ? 'url(' + product.galleryImages.image_1 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__2" [style.background]="product.galleryImages.image_2 ? 'url(' + product.galleryImages.image_2 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__3" [style.background]="product.galleryImages.image_3 ? 'url(' + product.galleryImages.image_3 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__4" [style.background]="product.galleryImages.image_4 ? 'url(' + product.galleryImages.image_4 + ')' : ''" [style.background-size]="'cover'"></div>
       <div class="product-images__5" [style.background]="product.galleryImages.image_5 ? 'url(' + product.galleryImages.image_5 + ')' : ''" [style.background-size]="'cover'"></div>
-    </div>
+    </div> -->
     <!-- <div class="product-information">
       <div *ngIf="product.repeatIntroduction" class="product-information__text">
           <h1 class="product-header">
